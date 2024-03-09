@@ -23,4 +23,6 @@ public abstract class Controller<T> {
     // Métodos abstractos que deben ser implementados por los controladores específicos
     public abstract void agregar();
     public abstract void mostrarInformacion();
+    
+    //Holaaaa
 }
