@@ -45,6 +45,7 @@ public class Caballos implements Runnable {
             if (contador == 0) {
                 contador++;
                 System.out.println(nombre + " ha ganado la carrera!");
+               
             }
         }
     }
