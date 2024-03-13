@@ -14,10 +14,13 @@ public class Juego extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tblDatos = new javax.swing.JTable();
+        lblCaballos = new javax.swing.JLabel();
+        jpbBarraCarrera = new javax.swing.JProgressBar();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        jMenuIniciar = new javax.swing.JMenu();
+        jMenuAgregar = new javax.swing.JMenu();
         AgreCaballo = new javax.swing.JMenuItem();
         AgreJugador = new javax.swing.JMenuItem();
 
@@ -25,20 +28,30 @@ public class Juego extends javax.swing.JFrame {
 
         jButton1.setText("jButton1");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblDatos.setBackground(new java.awt.Color(222, 222, 171));
+        tblDatos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Title 3", "Title 2"
+                "Jugador", "Apuesta", "Caballo"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane2.setViewportView(tblDatos);
 
-        jMenu1.setText("Agregar");
+        lblCaballos.setText("🐴Caballos");
+
+        jMenuIniciar.setText("Iniciar");
+        jMenuBar1.add(jMenuIniciar);
+
+        jMenuAgregar.setText("Agregar");
 
         AgreCaballo.setText("Caballo");
         AgreCaballo.addActionListener(new java.awt.event.ActionListener() {
@@ -46,12 +59,12 @@ public class Juego extends javax.swing.JFrame {
                 AgreCaballoActionPerformed(evt);
             }
         });
-        jMenu1.add(AgreCaballo);
+        jMenuAgregar.add(AgreCaballo);
 
         AgreJugador.setText("Jugador");
-        jMenu1.add(AgreJugador);
+        jMenuAgregar.add(AgreJugador);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(jMenuAgregar);
 
         setJMenuBar(jMenuBar1);
 
@@ -60,16 +73,24 @@ public class Juego extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(455, Short.MAX_VALUE))
+                .addGap(21, 21, 21)
+                .addComponent(lblCaballos)
+                .addGap(45, 45, 45)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane2)
+                    .addComponent(jpbBarraCarrera, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(124, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(84, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(82, 82, 82))
+                .addContainerGap(47, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblCaballos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jpbBarraCarrera, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(41, 41, 41)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33))
         );
 
         pack();
@@ -96,9 +117,12 @@ public class Juego extends javax.swing.JFrame {
     private javax.swing.JMenuItem AgreCaballo;
     private javax.swing.JMenuItem AgreJugador;
     private javax.swing.JButton jButton1;
-    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenuAgregar;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JMenu jMenuIniciar;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JProgressBar jpbBarraCarrera;
+    private javax.swing.JLabel lblCaballos;
+    private javax.swing.JTable tblDatos;
     // End of variables declaration//GEN-END:variables
 }
